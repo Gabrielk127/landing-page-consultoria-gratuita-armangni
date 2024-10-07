@@ -1,8 +1,15 @@
 import { Building2, DollarSign, TrendingUp, Users } from "lucide-react";
 import TextCard from "../TextCard";
-import React from "react";
+import Button from "../Button";
+import React, { useState } from "react";
+import Modal from "../Modal";
 
 const SectionOne: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <section
       className=" w-full max-w-[1280px] mx-auto
@@ -12,6 +19,14 @@ const SectionOne: React.FC = () => {
       xl:px-36 xl:pb-16
   "
     >
+      {/* MOBILE */}
+      <div className="sm:px-10 md:px-0 md:hidden">
+        <Button
+          label="Quero agendar uma consultoria de crédito para meu negócio"
+          onClick={openModal}
+        />
+      </div>
+
       <div className=" text-white flex items-center justify-center">
         <div className="mx-auto">
           <h2
@@ -22,18 +37,18 @@ const SectionOne: React.FC = () => {
                   xl:text-4xl xl:leading-normal
                   "
           >
-            <TrendingUp className="w-8 h-8 md:w-12 md:h-12 mr-2 text-teal-400" />
+            <TrendingUp className="w-8 h-8 md:w-12 md:h-12 mr-2 text-custom-icons" />
             Maximize seu negócio
           </h2>
           <div className="grid md:grid-cols-2 gap-6 justify-between">
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div className="bg-custom-background-card p-6 rounded-lg shadow-lg">
               <h3
                 className="text-sm font-bold text-white text-center mb-4 flex items-center
               sm:text-lg
               lg:text-xl
             "
               >
-                <Users className="w-6 h-6 mr-2 text-teal-400" />
+                <Users className="w-6 h-6 mr-2 text-custom-icons" />
                 Quem pode participar
               </h3>
               <ul className="space-y-2">
@@ -42,7 +57,7 @@ const SectionOne: React.FC = () => {
                 md:text-base
               "
                 >
-                  ✔️ Prestadores de serviços (médicos, dentistas)
+                  ✔️ Prestadores de serviços (médicos, dentistas, etc)
                 </li>
                 <li
                   className="text-xs
@@ -50,25 +65,25 @@ const SectionOne: React.FC = () => {
                                   text-
                                 "
                 >
-                  ✔️ Comércio (supermercados, autopeças)
+                  ✔️ Comércio (supermercados, autopeças, etc)
                 </li>
                 <li
                   className="text-xs
                                   md:text-base
                                 "
                 >
-                  ✔️ Indústrias
+                  ✔️ Indústrias entre outros
                 </li>
               </ul>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+            <div className="bg-custom-background-card p-6 rounded-lg shadow-lg">
               <h3
                 className="text-sm font-bold text-white text-center mb-4 flex items-center
               sm:text-lg
               lg:text-xl
             "
               >
-                <DollarSign className="w-6 h-6 mr-2 text-teal-400" />
+                <DollarSign className="w-6 h-6 mr-2 text-custom-icons" />
                 Valores disponíveis
               </h3>
               <div className="space-y-2">
@@ -92,10 +107,11 @@ const SectionOne: React.FC = () => {
               xl:text-xl xl:leading-normal
               "
           >
-            <Building2 className="w-8 h-8 md:w-12 md:h-12 mr-2 text-teal-400" />
+            <Building2 className="w-8 h-8 md:w-12 md:h-12 mr-2 text-custom-icons" />
             Créditos com condições privilegiadas
           </p>
         </div>
+        <Modal isOpen={isModalOpen} onClose={closeModal} />
       </div>
     </section>
   );

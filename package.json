@@ -1,12 +1,13 @@
 {
-  "name": "landing-page-one",
+  "name": "landing-page-consultoria-gratuita",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@vercel/speed-insights": "^1.0.12",
