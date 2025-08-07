@@ -6,6 +6,7 @@ import SectionTwo from "@/components/Sections/SectionTwo";
 import SectionThree from "@/components/Sections/SectionThree";
 import SectionFour from "@/components/Sections/SectionFour";
 import Footer from "@/components/Footer";
+import RDStationForm from "@/components/Sections/RDStationForm";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
         <Header />
         <div className="bg-custom-background-two">
           <SectionOne />
+        </div>
+        <div id="form" className="bg-custom-background ">
+          <RDStationForm />
         </div>
         <div className="bg-custom-background">
           <SectionTwo />

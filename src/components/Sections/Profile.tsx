@@ -1,15 +1,15 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import simone from "@/assets/simone.png";
 
 import Button from "../Button";
-import Modal from "../Modal";
+// import Modal from "../Modal";
 
 const Profile: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   return (
     <section
@@ -79,13 +79,15 @@ const Profile: React.FC = () => {
           className="pt-8 
           "
         >
-          <Button
-            label="Quero agendar uma consultoria de crédito para meu negócio"
-            className="xl:w-full"
-            onClick={openModal}
-          />
+          <a href="#form">
+            <Button
+              label="Quero agendar uma consultoria de crédito para meu negócio"
+              className="xl:w-full"
+              // onClick={openModal}
+            />
+          </a>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
+        {/* <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
       </section>
     </section>
   );

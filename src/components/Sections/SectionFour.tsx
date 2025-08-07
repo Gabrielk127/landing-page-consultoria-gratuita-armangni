@@ -1,13 +1,13 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Button from "../Button";
-import Modal from "../Modal";
+// import Modal from "../Modal";
 import ProfileInfographic from "./ProfileInfographic";
 
 const SectionFour: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   return (
     <section
@@ -25,12 +25,14 @@ const SectionFour: React.FC = () => {
       lg:w-[600px] lg:pt-0
       "
       >
-        <Button
-          label="Quero agendar uma consultoria de crédito para meu negócio"
-          onClick={openModal}
-        />
+        <a href="#form">
+          <Button
+            label="Quero agendar uma consultoria de crédito para meu negócio"
+            // onClick={openModal}
+          />
+        </a>
       </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
+      {/* <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
     </section>
   );
 };

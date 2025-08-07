@@ -1,15 +1,15 @@
 import Button from "../Button";
 import Image from "next/image";
 import simoneTitle from "@/assets/simoneTitle.svg";
-import { useState } from "react";
-import Modal from "../Modal";
+// import { useState } from "react";
+// import Modal from "../Modal";
 import { TrendingUp } from "lucide-react";
 
 const Header: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   return (
     <div className="relative max-w-[2000px] mx-auto">
@@ -69,15 +69,17 @@ const Header: React.FC = () => {
             </h1>
 
             <div className="hidden md:flex md:w-[400px] lg:w-[500px] xl:w-full z-20">
-              <Button
-                label="Quero agendar uma consultoria de crédito para meu negócio"
-                onClick={openModal}
-              />
+              <a href="#form">
+                <Button
+                  label="Quero agendar uma consultoria de crédito para meu negócio"
+                  // onClick={openModal}
+                />
+              </a>
             </div>
           </div>
           <div className="w-[250px] lg:w-[400px] hidden md:flex"></div>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
+        {/* <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
       </section>
     </div>
   );

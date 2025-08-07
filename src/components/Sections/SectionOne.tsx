@@ -1,14 +1,14 @@
 import { Building2, DollarSign, TrendingUp, Users } from "lucide-react";
 import TextCard from "../TextCard";
 import Button from "../Button";
-import React, { useState } from "react";
-import Modal from "../Modal";
+// import React, { useState } from "react";
+// import Modal from "../Modal";
 
 const SectionOne: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   return (
     <section
@@ -21,10 +21,12 @@ const SectionOne: React.FC = () => {
     >
       {/* MOBILE */}
       <div className="sm:px-10 md:px-0 md:hidden">
-        <Button
-          label="Quero agendar uma consultoria de crédito para meu negócio"
-          onClick={openModal}
-        />
+        <a href="#form">
+          <Button
+            label="Quero agendar uma consultoria de crédito para meu negócio"
+            // onClick={openModal}
+          />
+        </a>
       </div>
 
       <div className=" text-white flex items-center justify-center">
@@ -111,7 +113,7 @@ const SectionOne: React.FC = () => {
             Créditos com condições privilegiadas
           </p>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} />
+        {/* <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
       </div>
     </section>
   );

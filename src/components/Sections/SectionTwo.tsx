@@ -1,19 +1,19 @@
 import Button from "../Button";
 import Card from "../Card";
-import React, { useState } from "react";
+import React from "react";
 import icon1 from "@/assets/icons-yellow/icon1.svg";
 import icon2 from "@/assets/icons-yellow/icon2.svg";
 import icon3 from "@/assets/icons-yellow/icon3.svg";
 import icon4 from "@/assets/icons-yellow/icon4.svg";
 import icon5 from "@/assets/icons-yellow/icon5.svg";
 import icon6 from "@/assets/icons-yellow/icon6.svg";
-import Modal from "../Modal";
+// import Modal from "../Modal"
 
 const SectionTwo: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  // const openModal = () => setIsModalOpen(true);
+  // const closeModal = () => setIsModalOpen(false);
 
   return (
     <section
@@ -73,12 +73,14 @@ const SectionTwo: React.FC = () => {
       lg:w-[600px]
       "
       >
-        <Button
-          label="Quero agendar uma consultoria de crédito para meu negócio"
-          onClick={openModal}
-        />
+        <a href="#form">
+          <Button
+            label="Quero agendar uma consultoria de crédito para meu negócio"
+            // onClick={openModal}
+          />
+        </a>
       </div>
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
+      {/* <Modal isOpen={isModalOpen} onClose={closeModal} /> */}
     </section>
   );
 };
